@@ -5,7 +5,11 @@
   if(hour == 0){
       hour = 12;
   }
-   hour = (hour < 10) ? "0" + hour : hour;
+if(hour > 12){
+      hour = hour - 12;
+      session = "PM";
+   }
+	  hour = (hour < 10) ? "0" + hour : hour;
  
   let time = hour
   let print=document.getElementById("date1")
